@@ -4,5 +4,35 @@ GET  http://localhost:3000/ttech HTTP/1.1
 ### get the root path /
 GET  http://localhost:3000/ HTTP/1.1
 
-### get the students route /
+### get all students
 GET http://localhost:3000/students
+
+### get one student
+GET  http://localhost:300/students/67323cb806a5244753855b93
+
+### create a student
+POST  http://localhost:3000/students HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Ethan",
+    "lastName": "Woods",
+    "email": "ewoods@something.com",
+    "age": 28,
+    "currentCollege": "Tooele Technical College",
+}
+
+### edit a student
+PUT  http://localhost:3000/students/67323cb806a5244753855b93 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Abby",
+    "lastName": "Woods",
+    "email": "awoods@something.com",
+    "age": 27,
+    "currentCollege": "Tooele Technical College",
+}
+
+### delete a student
+DELETE  http://localhost:3000/students/67323cb806a5244753855b93 HTTP/1.1
